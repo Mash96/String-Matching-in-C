@@ -47,7 +47,7 @@ int kmpMatch(char *T,char *P)
 	}
 	
 	for(int i=0; i<n;i++){   //pointer of text
-		while(q<0 && P[q] != T[i]){ //check from left to right
+		while(q>0 && P[q] != T[i]){ //check from left to right
 			q = pi[q];	    //check from the pi array    
 		}
 		if(P[q] == T[i]){  //if a match then itterate q by 1
